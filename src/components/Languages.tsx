@@ -1,5 +1,4 @@
-import React from "react";
-import CircularAnimation from "./CircularAnimation";
+
 import Spinner from "./Spinner";
 
 const Languages = () => {

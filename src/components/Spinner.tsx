@@ -1,4 +1,4 @@
-import React from "react";
+
 import CircularAnimation from "./CircularAnimation";
 
 const Spinner = () => {
