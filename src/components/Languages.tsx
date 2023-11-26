@@ -18,7 +18,7 @@ const Languages: React.FC<any> = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex justify-center w-full"
         >
-          <div className="relative  h-fit mb-[10%]">
+          <div className="relative mb-[7%]">
             <div>
               <p className="bg-blue rounded-2xl text-header_sm font-azeret font-semibold p-[5%] text-blue_text relative max-w-[80vw] overflow-auto max-h-[50vh] text-center ">
                 Highly experienced Automation Engineer and Quality Assurance
@@ -41,7 +41,7 @@ const Languages: React.FC<any> = () => {
           </div>
         </motion.div>
         <div
-          className="flex justify-center font-azeret font-semibold text-header_lg mt-[10%] pt-[7%]"
+          className="flex justify-center font-azeret font-semibold text-header_lg mt-[5%] pt-[7%]"
           id="languages"
         >
           <div>Languages / Skills</div>
