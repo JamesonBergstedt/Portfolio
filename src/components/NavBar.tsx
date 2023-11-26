@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useScroll } from "framer-motion";
 import { useState } from "react";
 
-const NavBar: React.FC<any> = (props) => {
+const NavBar: React.FC<any> = () => {
   const { scrollY } = useScroll();
 
   const [hidden, setHidden] = useState(false);
