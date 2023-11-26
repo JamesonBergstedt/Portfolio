@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Header = () => {
   return (
     <>
-      <div className="flex  justify-center items-center h-[100vh] px-[3%] ">
+      <div className="flex  justify-center items-center h-[100vh] px-[3%] relative">
         {/* <div className="flex justify-center w-[50%]">
           <div className=" h-[70vmin] w-full relative">
             <div className="bg-green w-fit p-[5%]  rounded-2xl absolute top-[15%] left-[25%]">
