@@ -1,9 +1,10 @@
-
-
 const Projects = () => {
   return (
     <div>
-      <div className="flex justify-center font-azeret font-semibold text-header_lg my-[10%]">
+      <div
+        className="flex justify-center font-azeret font-semibold text-header_lg my-[10%] pt-[2%]"
+        id="projects"
+      >
         <div>Projects</div>
       </div>
 

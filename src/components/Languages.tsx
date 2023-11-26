@@ -1,11 +1,15 @@
 import Spinner from "./Spinner";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
-const Languages = () => {
+const Languages: React.FC<any> = (props) => {
+  // const langRef = useRef()
+  // const projectsRef = useRef()
+
   return (
     <>
-      <div>
-        <div className="flex justify-center font-azeret font-semibold text-header_lg mb-[%]">
+      <div id="about">
+        <div className="flex justify-center font-azeret font-semibold text-header_lg pt-[5%]">
           <div>About Me</div>
         </div>
 
@@ -15,7 +19,7 @@ const Languages = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex justify-center w-full"
         >
-          <div className="relative  h-fit mb-[10%]">
+          <div className="relative  h-fit mb-[10%]" ref={props.aboutRef}>
             <div>
               <p className="bg-blue rounded-2xl text-header_sm font-azeret font-semibold p-[5%] text-blue_text relative max-w-[80vw] overflow-auto max-h-[50vh] text-center ">
                 Highly experienced Automation Engineer and Quality Assurance
@@ -37,7 +41,10 @@ const Languages = () => {
             <div className="bg-lightblue w-full h-full p-[5%] rounded-2xl absolute top-[5%] -z-50 left-[3%]"></div>
           </div>
         </motion.div>
-        <div className="flex justify-center font-azeret font-semibold text-header_lg mt-[10%]">
+        <div
+          className="flex justify-center font-azeret font-semibold text-header_lg mt-[10%] pt-[2%]"
+          id="languages"
+        >
           <div>Languages / Skills</div>
         </div>
         <div className="relative font-bold">
