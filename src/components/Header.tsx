@@ -21,7 +21,7 @@ const Header = () => {
           </div>
         </div> */}
         <div className="h-full">
-          <motion.span
+          {/* <motion.span
             initial={{ opacity: 0, top: "15%" }}
             animate={{ opacity: 1, top: "30%" }}
             transition={{ duration: 2, ease: "easeOut" }}
@@ -34,12 +34,16 @@ const Header = () => {
               transition={{ duration: 3, ease: "easeOut" }}
               className="bg-lightgreen w-full h-full p-[10%] rounded-2xl absolute top-[10%] -z-50 left-[5%]"
             ></motion.div>
-          </motion.span>
-          {/* <span className="bg-green rounded-2xl p-[5%] text-header_lg font-azeret font-semibold text-green_text whitespace-nowrap relative top-[25%] left-[5%]">
+          </motion.span> */}
+          <span className="bg-green rounded-2xl p-[5%] text-header_lg font-azeret font-semibold text-green_text whitespace-nowrap relative top-[25%] left-[0%]">
             Hi, my name is
             <div className="bg-lightgreen w-full h-full p-[10%] rounded-2xl absolute top-[10%] -z-50 left-[5%]"></div>
-          </span> */}
-          <motion.span
+          </span>
+          <span className="bg-green rounded-2xl p-[5%] text-header_lg font-azeret font-semibold text-green_text whitespace-nowrap relative top-[45%] left-[10%]">
+            Hi, my name is
+            <div className="bg-lightgreen w-full h-full p-[10%] rounded-2xl absolute top-[10%] -z-50 left-[5%]"></div>
+          </span>
+          {/* <motion.span
             initial={{ opacity: 0, top: "60%" }}
             animate={{ opacity: 1, top: "40%" }}
             transition={{ duration: 2, ease: "easeOut" }}
@@ -52,7 +56,7 @@ const Header = () => {
               transition={{ duration: 3, ease: "easeOut" }}
               className="bg-lightyellow w-full h-full p-[10%] rounded-2xl absolute top-[10%] -z-50 left-[5%]"
             ></motion.div>
-          </motion.span>
+          </motion.span> */}
         </div>
 
         <div className="mb-[10%] ">
