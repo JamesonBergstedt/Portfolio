@@ -8,7 +8,7 @@
 
     /* Bundler mode */
     "moduleResolution": "Node",
-    
+
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -19,6 +19,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
 
     "allowSyntheticDefaultImports": true
   },

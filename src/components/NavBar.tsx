@@ -8,7 +8,7 @@ const NavBar: React.FC<any> = () => {
   const [hidden, setHidden] = useState(false);
 
   const scrollToTarget = (ref) => {
-    document.getElementById(ref).scrollIntoView({
+    document.getElementById(ref)!.scrollIntoView({
       behavior: "smooth",
     });
   };
