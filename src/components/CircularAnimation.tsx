@@ -12,7 +12,7 @@ const CircularAnimation: React.FC<circleProps> = ({ startAngle, img }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       // Update the angle to create the circular motion
-      setAngle((prevAngle) => (prevAngle + 1) % 360);
+      setAngle((prevAngle) => (prevAngle + 0.1) % 360);
     }, 25); // You can adjust the interval to control the speed of the animation
 
     return () => clearInterval(interval); // Cleanup the interval on component unmount
@@ -27,7 +27,7 @@ const CircularAnimation: React.FC<circleProps> = ({ startAngle, img }) => {
     <div className="absolute " style={position}>
       <div
         style={{ backgroundImage: `url(${img})` }}
-        className="bg-cover rounded-full w-[15vmin] h-[15vmin] "
+        className="bg-cover rounded-full w-[15vmin] h-[15vmin] drop-shadow-[0_30px_5px_rgba(0,0,0,0.25)]"
       ></div>
     </div>
   );

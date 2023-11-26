@@ -32,7 +32,7 @@ const NavBar = () => {
   return (
     <div className="   sticky top-0 z-50">
       <motion.nav
-        className="flex justify-between items-center bg-[#FFFFFF] px-[5%]"
+        className="flex justify-between items-center bg-[#FFFFFF] px-[5%] "
         variants={variants}
         animate={hidden ? "hidden" : "visible"}
         transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}

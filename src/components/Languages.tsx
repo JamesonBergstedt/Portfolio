@@ -1,18 +1,23 @@
-
 import Spinner from "./Spinner";
+import { motion } from "framer-motion";
 
 const Languages = () => {
   return (
     <>
       <div>
-        <div className="flex justify-center font-azeret font-semibold text-header_lg mb-[10%]">
+        <div className="flex justify-center font-azeret font-semibold text-header_lg mb-[%]">
           <div>About Me</div>
         </div>
 
-        <div className="flex justify-center w-full">
-          <div className="relative  h-fit">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="flex justify-center w-full"
+        >
+          <div className="relative  h-fit mb-[10%]">
             <div>
-              <p className="bg-blue rounded-2xl p-[5%] text-header_sm font-azeret font-semibold text-blue_text relative max-w-[80vw] overflow-auto max-h-[40vh] text-center">
+              <p className="bg-blue rounded-2xl text-header_sm font-azeret font-semibold p-[5%] text-blue_text relative max-w-[80vw] overflow-auto max-h-[50vh] text-center ">
                 Highly experienced Automation Engineer and Quality Assurance
                 specialist skilled in Python, Java, and React. I am dedicated to
                 ensuring software reliability and performance through rigorous
@@ -31,29 +36,29 @@ const Languages = () => {
             </div>
             <div className="bg-lightblue w-full h-full p-[5%] rounded-2xl absolute top-[5%] -z-50 left-[3%]"></div>
           </div>
-        </div>
+        </motion.div>
         <div className="flex justify-center font-azeret font-semibold text-header_lg mt-[10%]">
           <div>Languages / Skills</div>
         </div>
-        <div className="relative">
+        <div className="relative font-bold">
           <Spinner />
-          <span className="text-header_lg font-azeret absolute top-[25%] left-[15%] animate-pulse">
+          <span className="text-header_lg font-azeret absolute top-[25%] left-[15%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
             Python
           </span>
-          <span className="text-header_lg font-azeret absolute top-[50%] left-[5%] animate-pulse">
+          <span className="text-header_lg font-azeret absolute top-[50%] left-[5%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
             Java
           </span>
-          <span className="text-header_lg font-azeret absolute top-[80%] left-[18%] animate-pulse">
+          <span className="text-header_lg font-azeret absolute top-[80%] left-[18%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
             React
           </span>
 
-          <span className="text-header_lg font-azeret absolute top-[25%] left-[70%] animate-pulse">
+          <span className="text-header_lg font-azeret absolute top-[25%] left-[70%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
             Javascript
           </span>
-          <span className="text-header_lg font-azeret absolute top-[50%] left-[80%] animate-pulse">
+          <span className="text-header_lg font-azeret absolute top-[50%] left-[80%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
             Tailwind
           </span>
-          <span className="text-header_lg font-azeret absolute top-[80%] left-[75%] animate-pulse">
+          <span className="text-header_lg font-azeret absolute top-[80%] left-[75%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
             HTML
           </span>
         </div>

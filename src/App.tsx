@@ -6,7 +6,7 @@ import Resume from "./components/Resume";
 import NavBar from "./components/NavBar";
 
 function App() {
-    return (
+  return (
     <>
       <div className="bg-[url('/gridpatter_op_50.png')]">
         <NavBar />
