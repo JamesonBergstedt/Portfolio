@@ -8,10 +8,10 @@ const NavBar = () => {
   const [hidden, setHidden] = useState(false);
 
   function update() {
-    if (scrollY?.current < scrollY?.prev) {
+    if (scrollY.get() < scrollY.getPrevious()) {
       setHidden(false);
       console.log("visible");
-    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+    } else if (scrollY.get() > 100 && scrollY.get() > scrollY.getPrevious()) {
       setHidden(true);
       console.log("hidden");
     }
