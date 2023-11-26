@@ -1,6 +1,5 @@
 import Spinner from "./Spinner";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
 const Languages: React.FC<any> = (props) => {
   // const langRef = useRef()
