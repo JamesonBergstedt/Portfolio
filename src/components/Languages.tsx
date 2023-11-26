@@ -41,7 +41,7 @@ const Languages: React.FC<any> = (props) => {
           </div>
         </motion.div>
         <div
-          className="flex justify-center font-azeret font-semibold text-header_lg mt-[10%] pt-[2%]"
+          className="flex justify-center font-azeret font-semibold text-header_lg mt-[10%] pt-[5%]"
           id="languages"
         >
           <div>Languages / Skills</div>

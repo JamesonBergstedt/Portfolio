@@ -2,7 +2,7 @@ import CircularAnimation from "./CircularAnimation";
 
 const Spinner = () => {
   return (
-    <div className="flex justify-center items-center h-[100vh]">
+    <div className="flex justify-center items-center h-[80vh]">
       <div className="relative">
         <CircularAnimation startAngle={0} img={"/python_icon.png"} />
         <CircularAnimation startAngle={60} img={"/javascript_icon.png"} />
