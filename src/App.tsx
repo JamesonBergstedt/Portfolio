@@ -13,12 +13,11 @@ function App() {
 
   return (
     <>
-      <div>
-        <NavBar refference={aboutRef} />
-      </div>
-      <div className="bg-[url('/gridpatter_op_50.png')] flex justify-center">
-        <div className=" ">
-          <div className="max-w-[1800px]">
+      <div className="bg-[url('/gridpatter_op_50.png')]">
+        <div className="">
+          <NavBar className="w-[100vw]" refference={aboutRef} />
+
+          <div className="max-w-[1800px] m-auto">
             <Header />
             <Languages refference={aboutRef} />
             <Projects />

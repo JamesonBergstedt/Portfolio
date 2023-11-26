@@ -36,7 +36,7 @@ const NavBar: React.FC<any> = () => {
   });
 
   return (
-    <div className="   sticky top-0 z-50">
+    <div className="sticky top-0 z-50">
       <motion.nav
         className="flex justify-between items-center bg-[#FFFFFF] px-[5%] "
         variants={variants}
@@ -62,11 +62,14 @@ const NavBar: React.FC<any> = () => {
           >
             Projects
           </li>
-          <li
-            onClick={() => scrollToTarget("about")}
-            className="hover:text-red cursor-pointer"
-          >
-            Resume
+          <li className="hover:text-red cursor-pointer">
+            <a
+              href={"/Jameson_Bergstedt_Resume.pdf"}
+              download="Jameson Bergstedt Resume"
+              target="_blank"
+            >
+              <button>Resume</button>
+            </a>
           </li>
         </ul>
         <div className=" font-azeret text-header_lg  font-semibold select-none">
