@@ -19,7 +19,7 @@ function App() {
       <div className="bg-[url('/gridpatter_op_50.png')] flex justify-center">
         <div className=" ">
           <div className="max-w-[1800px]">
-            <Header />
+            {/* <Header /> */}
             <Languages refference={aboutRef} />
             <Projects />
 
