@@ -8,7 +8,7 @@ const Languages: React.FC<any> = (props) => {
   return (
     <>
       <div id="about">
-        <div className="flex justify-center font-azeret font-semibold text-header_lg pt-[5%]">
+        <div className="flex justify-center font-azeret font-semibold text-header_lg pt-[7%]">
           <div>About Me</div>
         </div>
 
@@ -18,7 +18,7 @@ const Languages: React.FC<any> = (props) => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex justify-center w-full"
         >
-          <div className="relative  h-fit mb-[10%]" ref={props.aboutRef}>
+          <div className="relative  h-fit mb-[10%]">
             <div>
               <p className="bg-blue rounded-2xl text-header_sm font-azeret font-semibold p-[5%] text-blue_text relative max-w-[80vw] overflow-auto max-h-[50vh] text-center ">
                 Highly experienced Automation Engineer and Quality Assurance
@@ -41,7 +41,7 @@ const Languages: React.FC<any> = (props) => {
           </div>
         </motion.div>
         <div
-          className="flex justify-center font-azeret font-semibold text-header_lg mt-[10%] pt-[5%]"
+          className="flex justify-center font-azeret font-semibold text-header_lg mt-[10%] pt-[7%]"
           id="languages"
         >
           <div>Languages / Skills</div>
