@@ -60,6 +60,18 @@ const Header = () => {
             <div className=" bg-lightred rounded-full absolute h-[36vmin] w-[36vmin] bottom-[-5%] left-[3%] -z-50"></div>
           </div>
         </div>
+        {/* <div>
+          <img
+            src="/astro.svg"
+            className="absolute h-[90vmin] w-[90vmin] top-[78%] left-[0%]"
+          />
+        </div>
+        <div>
+          <img
+            src="/satelite.svg"
+            className="absolute h-[40vmin] w-[40vmin] top-[90%] left-[70%]"
+          />
+        </div> */}
       </div>
     </>
   );
