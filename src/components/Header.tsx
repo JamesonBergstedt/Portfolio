@@ -49,7 +49,7 @@ const Header = () => {
 
         <div className=" flex items-center mt-[15vh]">
           <div className="bg-[url('/jameson_picture.jpg')] h-[35vmin] w-[35vmin]  rounded-full bg-cover relative top-[-10%]">
-            <div className=" bg-lightred rounded-full absolute h-[36vmin] w-[36vmin] bottom-[-5%] left-[3%] -z-50"></div>
+            <div className=" bg-red rounded-full absolute h-[36vmin] w-[36vmin] bottom-[-5%] left-[3%] -z-50"></div>
           </div>
         </div>
         {/* <div>
