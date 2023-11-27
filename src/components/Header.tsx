@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Header = () => {
   return (
     <>
-      <div className="flex px-[3%] h-[100vh] relative justify-center">
+      <div className="flex px-[3%] h-[85vh] relative justify-center mb-[5%]">
         <div className="h-full flex-col justify-center flex w-[50vw] gap-[5%]">
           <div className=" min-h-[15vh]">
             <motion.span
