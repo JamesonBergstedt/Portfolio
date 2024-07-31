@@ -1,9 +1,74 @@
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  //1 char = 100ms
+  const sequence = [
+    // 1900 + 3000 + 1900
+    "Full Stack Engineer",
+    3000,
+    "",
+    700,
+
+    // 1300 + 3000 + 1300
+    "Web Developer",
+    //13
+    3000,
+    "",
+    1900,
+
+    // 1700 + 3000 + 1700
+    "Python Enthusiast",
+    //17
+    3000,
+    "",
+    1100,
+
+    // 1600 + 3000 + 1600
+    "Dev Ops Tinkerer",
+    //16
+    3000,
+    "",
+    1300,
+
+    // 700 + 3000 + 700
+    "Husband",
+    //7
+    3000,
+    "",
+    3100,
+
+    // 600 + 3000 + 600
+    "Father",
+    //6
+    3000,
+    "",
+    3000,
+  ];
+  const times = [3325, 2250, 2950, 2800, 1200, 1100];
+
+  useEffect(() => {
+    let delay = times[currentIndex];
+    console.log(delay);
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % (sequence.length / 2));
+    }, 7600); // Change this to match the delay in the sequence
+
+    return () => clearInterval(interval);
+  }, [sequence.length, currentIndex]);
+
+  const colorClasses = [
+    "#DB4437", // Red
+    "#FDC82F", // Yellow
+    "#4285F4", // Blue
+    "#0F9D58", // Green
+  ];
   return (
     <>
-      <div className="flex px-[3%] h-[85vh] relative justify-center mb-[5%]">
+      <div className="flex px-[3%] h-[60vh] gap-[10%] min-h-[] relative justify-center mb-[5%]">
         <div className="h-full flex-col justify-center flex w-[50vw] lg:gap-[5%]">
           <motion.div
             initial={{
@@ -88,18 +153,28 @@ const Header = () => {
             <div className=" bg-red rounded-full absolute h-[36vmin] w-[36vmin] bottom-[-5%] left-[3%] -z-50"></div>
           </div>
         </div>
-        {/* <div>
-          <img
-            src="/astro.svg"
-            className="absolute h-[90vmin] w-[90vmin] top-[78%] left-[0%]"
-          />
+      </div>
+      <div className="  text-header_lg text-black  font-azeret w-full">
+        <div className="mx-auto w-fit whitespace-nowrap">
+          <span className="">I am a...</span>
+          <span
+            style={{
+              color: `${colorClasses[currentIndex % colorClasses.length]}`,
+            }}
+            className="text-nowrap font-semibold "
+          >
+            <TypeAnimation
+              sequence={sequence}
+              wrapper="span"
+              speed={{ type: "keyStrokeDelayInMs", value: 100 }}
+              repeat={Infinity}
+              style={{}}
+              className={`font-bebas text-header_lg text-center ps-[2%] text-nowrap ${
+                colorClasses[currentIndex % colorClasses.length]
+              }`}
+            />
+          </span>
         </div>
-        <div>
-          <img
-            src="/satelite.svg"
-            className="absolute h-[40vmin] w-[40vmin] top-[90%] left-[70%]"
-          />
-        </div> */}
       </div>
     </>
   );
