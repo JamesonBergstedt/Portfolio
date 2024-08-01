@@ -1,87 +1,156 @@
 import Spinner from "./Spinner";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Languages: React.FC<any> = () => {
-  // const langRef = useRef()
-  // const projectsRef = useRef()
+  const [openLanguage, setOpenLanguage] = useState(false);
+
+  const slideVars = () => {
+    if (!openLanguage) {
+      return {
+        initial: {
+          zIndex: 100,
+          transform: "translateZ(8px) translateY(-2px)",
+        },
+        animate: {
+          zIndex: 100,
+          transform: "translateZ(32px) translateY(-18px)",
+        },
+        transition: {
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 2.5,
+          ease: "easeInOut",
+        },
+      };
+    } else {
+      return {
+        initial: {
+          zIndex: 100,
+        },
+        animate: {
+          x: "200%",
+          y: "-10%",
+          zIndex: 100,
+        },
+        transition: {
+          duration: 2.5,
+          ease: "easeInOut",
+        },
+      };
+    }
+  };
 
   return (
     <>
-      <div id="about">
-        <div className="flex justify-center font-azeret font-semibold text-header_lg pt-[7%]">
-          <div>About Me</div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex justify-center w-full mb-[30%] sm:mb-[25%] md:mb-[20%] lg:mb-[15%] xl:mb-[10%] 2xl:mb-[5%]"
-        >
-          <div className="relative mb-[10%]">
-            <div>
-              <p className="bg-blue rounded-2xl text-header_sm font-azeret font-semibold p-[5%] text-blue_text relative max-w-[80vw] overflow-auto max-h-[50vh]  text-center ">
-                Highly experienced Automation Engineer and Quality Assurance
-                specialist skilled in Python, Java, and React. I am dedicated to
-                ensuring software reliability and performance through rigorous
-                testing and automation. Proficient in both manual and automated
-                testing and a proven track record of designing and executing
-                comprehensive test suites that drive defect detection and
-                prevention. My expertise extends to full-stack development where
-                I have successfully created multiple applications. I excel in
-                frontend frameworks such as React, ensuring seamless user
-                experiences. Additionally, my backend skills encompass the
-                utilization of Python scripting and object oriented development
-                with Java. Thriving in Agile environments, I adapt quickly to
-                evolving project requirements, consistently contributing to the
-                on-time delivery of high-quality software.
-              </p>
-            </div>
-            <div className="bg-lightblue w-full h-full p-[5%] rounded-2xl absolute top-[5%] -z-50 left-[3%] "></div>
-          </div>
-        </motion.div>
-        <div className="">
-          <div
-            className="flex justify-center items-center font-azeret font-semibold text-header_lg  "
-            id="languages"
+      <div id="languages" className="mt-[25%] flex justify-center items-center">
+        <div className="flex  flex-wrap justify-center items-center w-full">
+          <motion.div
+            initial={slideVars().initial}
+            animate={slideVars().animate}
+            transition={slideVars().transition}
+            style={slideVars().style}
+            className="w-[30vw] h-[20vw] relative min-w-[150px] min-h-[100px]"
+            id="card1"
+            onClick={() => setOpenLanguage(!openLanguage)}
           >
-            <div>Languages / Skills</div>
-          </div>
-          <div className="relative font-bold">
-            <Spinner />
-            <span className="text-header_lg font-azeret absolute top-[25%] left-[15%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
-              Python
-            </span>
-            <span className="text-header_lg font-azeret absolute top-[50%] left-[5%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
-              Java
-            </span>
-            <span className="text-header_lg font-azeret absolute top-[80%] left-[18%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
-              React
-            </span>
+            <div className="h-full w-full relative group">
+              <div className="absolute h-[80%] w-[80%] bg-yellow z-40 rounded-2xl group-hover:scale-105 duration-100 transition-all ease-in cursor-pointer">
+                <span className="text-yellow_text text-header_lg flex justify-center items-center h-full font-azeret">
+                  Languages
+                </span>
+              </div>
+              <div className="absolute h-[80%] w-[80%] bg-lightyellow top-[3%] z-10 left-[3%] rounded-2xl group-hover:scale-105 duration-100 transition-all ease-in"></div>
+            </div>
+          </motion.div>
 
-            <span className="text-header_lg font-azeret absolute top-[25%] left-[70%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
-              Javascript
-            </span>
-            <span className="text-header_lg font-azeret absolute top-[50%] left-[80%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
-              Tailwind
-            </span>
-            <span className="text-header_lg font-azeret absolute top-[80%] left-[75%] animate-pulse drop-shadow-[0_15px_3px_rgba(0,0,0,0.25)]">
-              HTML
-            </span>
-          </div>
+          <motion.div
+            key={0}
+            initial={{
+              zIndex: 100,
+              transform: "translateZ(8px) translateY(-2px)",
+            }}
+            animate={{
+              zIndex: 100,
+              transform: "translateZ(32px) translateY(-8px)",
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "mirror",
+              duration: 2.25,
+              ease: "easeInOut",
+            }}
+            className="w-[30vw] h-[20vw] relative min-w-[150px] min-h-[100px]"
+            id="card2"
+          >
+            <div className="h-[80%] w-[80%] relative group">
+              <div className="absolute h-full w-full bg-green z-40 rounded-2xl group-hover:scale-105 duration-100 transition-all ease-in cursor-pointer">
+                <span className="text-green_text text-header_lg flex justify-center items-center h-full font-azeret">
+                  Front-End
+                </span>
+              </div>
+              <div className="absolute h-full w-full bg-lightgreen top-[3%] z-10 left-[3%] rounded-2xl group-hover:scale-105 duration-100 transition-all ease-in"></div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{
+              zIndex: 100,
+              transform: "translateZ(8px) translateY(-2px)",
+            }}
+            animate={{
+              zIndex: 100,
+              transform: "translateZ(32px) translateY(-8px)",
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "mirror",
+              duration: 2.25,
+              ease: "easeInOut",
+            }}
+            className="w-[30vw] h-[20vw] relative min-w-[150px] min-h-[100px]"
+            id="card3"
+          >
+            <div className="h-[80%] w-[80%] relative group">
+              <div className="absolute h-full w-full bg-red z-40 rounded-2xl group-hover:scale-105 duration-100 transition-all ease-in cursor-pointer bottom-[-25%] right-[-25%]">
+                <span className="text-red_text text-header_lg flex justify-center items-center h-full font-azeret">
+                  Cloud
+                </span>
+              </div>
+              <div className="absolute h-full w-full bg-lightred bottom-[-28%] right-[-28%] z-10 rounded-2xl group-hover:scale-105 duration-100 transition-all ease-in"></div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{
+              zIndex: 100,
+              transform: "translateZ(8px) translateY(-2px)",
+            }}
+            animate={{
+              zIndex: 100,
+              transform: "translateZ(32px) translateY(-8px)",
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "mirror",
+              duration: 3,
+              ease: "easeInOut",
+            }}
+            className="w-[30vw] h-[20vw] relative min-w-[150px] min-h-[100px]"
+            id="card4"
+          >
+            <div className="h-[80%] w-[80%] relative group">
+              <div className="absolute h-full w-full bg-blue z-40 rounded-2xl group-hover:scale-105 duration-100 transition-all ease-in cursor-pointer bottom-[-25%] right-[-25%]">
+                <span className="text-blue_text text-header_lg flex justify-center items-center h-full font-azeret">
+                  Dev Ops
+                </span>
+              </div>
+              <div className="absolute h-full w-full bg-lightblue bottom-[-28%] right-[-28%] z-10 rounded-2xl group-hover:scale-105 duration-100 transition-all ease-in"></div>
+            </div>
+          </motion.div>
         </div>
-
-        {/* <div className="flex-col items-center justify-center ">
-        <div className=" w-full h-fit p-10 rounded-2xl relative m-auto">
-          <div className=" flex justify-center relative  min-h-[800px]">
-            <Spinner />
-
-          </div>
-        </div>
-      </div> */}
       </div>
     </>
-    // Need to create the circles with the icons of languages in them
   );
 };
 

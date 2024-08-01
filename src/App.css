@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Pacifico&family=Poppins:wght@400;500;700&family=Roboto+Serif:wght@200;300;400;500;600&family=Russo+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #4285f4;
+  --lightblue: #86a3d4;
+  --blue_text: #f2f5ff;
+
+  --red: #db4437;
+  --lightred: #e98383;
+  --red_text: #f6cbcb;
+
+  --yellow: #fdc82f;
+  --lightyellow: #ffd96c;
+  --yellow_text: #594c26;
+
+  --green: #0f9d58;
+  --lightgreen: #86af9b;
+  --green_text: #cff6e4;
+}
