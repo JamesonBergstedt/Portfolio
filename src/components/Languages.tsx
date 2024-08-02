@@ -1,7 +1,7 @@
-import Spinner from "./Spinner";
-import { delay, easeInOut, motion } from "framer-motion";
+// import Spinner from "./Spinner";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Card from "./Card";
+// import Card from "./Card";
 
 const Languages: React.FC<any> = () => {
   const [yellowCard, setYellowCard] = useState(false);
@@ -110,7 +110,7 @@ const Languages: React.FC<any> = () => {
             opacity: 0,
           },
         };
-      } else if (yellowCount == 2) {
+      } else {
         return {
           initial: {
             x: "50%",
@@ -174,7 +174,7 @@ const Languages: React.FC<any> = () => {
             opacity: 0,
           },
         };
-      } else if (greenCount == 2) {
+      } else {
         return {
           initial: {
             x: "50%",
@@ -238,7 +238,7 @@ const Languages: React.FC<any> = () => {
             opacity: 0,
           },
         };
-      } else if (redCount == 2) {
+      } else {
         return {
           initial: {
             x: "50%",
@@ -302,7 +302,7 @@ const Languages: React.FC<any> = () => {
             opacity: 0,
           },
         };
-      } else if (blueCount == 2) {
+      } else {
         return {
           initial: {
             x: "-50%",
@@ -322,12 +322,37 @@ const Languages: React.FC<any> = () => {
           },
         };
       }
+    } else {
+      return {
+        initial: {
+          x: "20%",
+          y: "10%",
+        },
+        animate: {
+          x: "20%",
+          y: "15%",
+        },
+        transition: {
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 1,
+          ease: "easeInOut",
+          delay: 0.55,
+        },
+        exit: {
+          x: "20%",
+          y: "10%",
+        },
+      };
     }
   };
 
   return (
     <>
-      <div id="languages" className="mt-[25%] flex justify-center items-center">
+      <div
+        id="languages"
+        className=" flex justify-center items-center min-h-[110vh] pb-[10%]"
+      >
         <div className="flex  flex-wrap justify-center items-center w-full ">
           <div className="flex justify-center items-center w-[75vw] ">
             <motion.div
@@ -350,7 +375,9 @@ const Languages: React.FC<any> = () => {
                 setYellowCount((prevCount) => (prevCount + 1) % 3);
               }}
             >
-              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-yellow relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px]"></div>
+              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-yellow relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-yellow_text font-azeret text-header_lg font-semibold">
+                <span>Languages</span>
+              </div>
               <div className="h-full w-full max-w-[600px]  max-h-[400px] bg-lightyellow absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
               <motion.div
@@ -409,7 +436,9 @@ const Languages: React.FC<any> = () => {
                 console.log(greenCount);
               }}
             >
-              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-green relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px]"></div>
+              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-green relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-green_text font-azeret text-header_lg font-semibold">
+                <span>Front-End</span>
+              </div>
               <div className="h-full w-full max-w-[600px]  max-h-[400px] bg-lightgreen absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
               <motion.div
@@ -470,7 +499,9 @@ const Languages: React.FC<any> = () => {
                 console.log(redCount);
               }}
             >
-              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-red relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px]"></div>
+              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-red relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-red_text font-azeret text-header_lg font-semibold">
+                <span>Dev-Ops</span>
+              </div>
               <div className="h-full w-full max-w-[600px]  max-h-[400px] bg-lightred absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
               <motion.div
@@ -529,7 +560,9 @@ const Languages: React.FC<any> = () => {
                 console.log(blueCount);
               }}
             >
-              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-blue relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px]"></div>
+              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-blue relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-blue_text font-azeret text-header_lg font-semibold">
+                <span>About Me</span>
+              </div>
               <div className="h-full w-full max-w-[600px]  max-h-[400px] bg-lightblue absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
               <motion.div
