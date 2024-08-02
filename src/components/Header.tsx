@@ -55,7 +55,7 @@ const Header = () => {
     console.log(delay);
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % (sequence.length / 2));
-    }, 7600); // Change this to match the delay in the sequence
+    }, 7550); // Change this to match the delay in the sequence
 
     return () => clearInterval(interval);
   }, [sequence.length, currentIndex]);
@@ -149,8 +149,8 @@ const Header = () => {
         </div>
 
         <div className=" flex items-center mt-[15vh]">
-          <div className="bg-[url('/jameson_picture.jpg')] h-[35vmin] w-[35vmin] border-[20px] border-red  rounded-full bg-cover relative top-[-10%]">
-            <div className=" bg-lightred rounded-full absolute h-[36vmin] w-[36vmin] bottom-[-5%] left-[1%] top-[1%] -z-50"></div>
+          <div className="bg-[url('/jameson_picture.jpg')] h-[35vmin] w-[35vmin] border-[2vmin] border-red  rounded-full bg-cover relative top-[-10%]">
+            <div className=" bg-lightred rounded-full absolute h-[35vmin] w-[35vmin]  -z-50"></div>
           </div>
         </div>
       </div>
