@@ -410,7 +410,7 @@ const Languages: React.FC<any> = () => {
                       }
                     : { height: "0vw", width: "0vw" }
                 }
-                transition={{ duration: 2.5, ease: "easeInOut" }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
                 className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
                 onClick={(e) => e.stopPropagation()}
               >
@@ -449,13 +449,13 @@ const Languages: React.FC<any> = () => {
                     }
                     transition={
                       yellowCard
-                        ? { delay: 2, duration: 1.5, ease: "easeIn" }
+                        ? { delay: 1, duration: 1.5, ease: "easeIn" }
                         : { duration: 1, ease: "easeIn" }
                     }
                     className="w-full h-full flex flex-col items-center justify-center"
                   >
                     <p
-                      className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer"
+                      className="text-header_lg font-azeret mb-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer"
                       onClick={() => setCardView("python")}
                     >
                       Python
@@ -483,17 +483,19 @@ const Languages: React.FC<any> = () => {
                         ? { delay: 2, duration: 1.5, ease: "easeIn" }
                         : { duration: 1, ease: "easeIn" }
                     }
-                    className="w-full h-full flex flex-col items-center justify-center"
+                    className="w-full h-full flex flex-col items-center "
                   >
-                    <p className="text-header_sm font-azeret    p-[15%] rounded-2xl text-center">
-                      I have over 8 years of experience working with Python. The
-                      backend for my personal project, Simple Scratch is built
-                      using Python. Additionally, I have expereince with
-                      webscraping (beautifulsoup), data analysis (numpy,
-                      pandas), web services (flask), NLP (nltk), and much more.
-                      Python is my preferred language. I enjoy the simplicity of
-                      it as well as its flexability.
-                    </p>
+                    {yellowCard && (
+                      <p className="text-header_sm font-azeret    pt-[35%] p-[15%] rounded-2xl text-center">
+                        I have over 8 years of experience working with Python.
+                        The backend for my personal project, Simple Scratch is
+                        built using Python. Additionally, I have expereince with
+                        webscraping (beautifulsoup), data analysis (numpy,
+                        pandas), web services (flask), NLP (nltk), and much
+                        more. Python is my preferred language. I enjoy the
+                        simplicity of it as well as its flexability.
+                      </p>
+                    )}
                   </motion.div>
                 )}
               </motion.div>
@@ -509,9 +511,9 @@ const Languages: React.FC<any> = () => {
                       }
                     : { height: "0vw", width: "0vw" }
                 }
-                transition={{ duration: 2.5, ease: "easeInOut" }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[100vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-lightyellow absolute h-[50vmax] w-[40vmax] -z-40 max-h-[100vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
@@ -777,20 +779,27 @@ const Languages: React.FC<any> = () => {
                   }
                   transition={
                     blueCard
-                      ? { delay: 2, duration: 1.5, ease: "easeIn" }
-                      : { duration: 1, ease: "easeIn" }
+                      ? { delay: 1, duration: 1.5, ease: "easeIn" }
+                      : { duration: 0.5, ease: "easeIn" }
                   }
                   className="w-full h-full flex flex-col items-center justify-center"
                 >
-                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
-                    Python
-                  </p>
-                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
-                    Java
-                  </p>
-                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
-                    Golang
-                  </p>
+                  {blueCard && (
+                    <p className="text-header_sm font-azeret    pt-[5%] p-[15%] rounded-2xl text-center">
+                      Hello! Welcome to my website. As you have probably seen,
+                      my name is Jameson Bergstedt. I am currently employed at
+                      Cisco as a software engineer. There, I work primarily with
+                      technologies such as golang, python, docker, kubernetes,
+                      and jenkins.I am married to my beautiful wife, Kayla, and
+                      we are expecting our first child in October, 2024! We love
+                      the outdoors (especially the mountains) and I am a BIG
+                      motorcycle enthusiast.When I am not hanging out with my
+                      wife, I spend most of my free time playing competitive
+                      video games, pool, and poker...and of course, working on
+                      personal projects. If you’d like to chat, send me an
+                      invitation on linkedIn!
+                    </p>
+                  )}
                 </motion.div>
               </motion.div>
               <motion.div
@@ -807,7 +816,7 @@ const Languages: React.FC<any> = () => {
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300 absolute h-[50vmax] w-[35vmax] -z-40 max-h-[100vh]  max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-lightblue absolute h-[50vmax] w-[35vmax] -z-40 max-h-[100vh]  max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
