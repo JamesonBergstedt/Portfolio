@@ -154,25 +154,24 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="text-black font-azeret w-full">
-        <div className="mx-auto w-fit whitespace-nowrap ">
-          <span className="text-typewriter">I am a...</span>
+      <div className="  text-typewriter text-black  font-azeret w-full">
+        <div className="mx-auto w-fit whitespace-nowrap">
+          <span className="">I am a...</span>
           <span
             style={{
               color: `${colorClasses[currentIndex % colorClasses.length]}`,
-              fontSize: "clamp(1.75rem, 2.5vw, 6rem)",
             }}
-            className="text-nowrap font-semibold"
+            className="text-nowrap font-semibold typewriter"
           >
             <TypeAnimation
               sequence={sequence}
               wrapper="span"
               speed={{ type: "keyStrokeDelayInMs", value: 100 }}
               repeat={Infinity}
-              className={`font-bebas text-center ps-[2%] text-nowrap ${
+              style={{}}
+              className={`font-bebas text-typewriter text-center ps-[2%] text-nowrap ${
                 colorClasses[currentIndex % colorClasses.length]
               }`}
-              style={{ fontSize: "clamp(1.75rem, 2.5vw, 6rem)" }}
             />
           </span>
         </div>
