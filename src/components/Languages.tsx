@@ -79,7 +79,7 @@ const Languages: React.FC<any> = () => {
           },
           transition: {
             repeat: Infinity,
-            repeatType: "mirror",
+            repeatType: "mirror" as "mirror",
             duration: 1,
             ease: "easeInOut",
             delay: 0.25,
@@ -101,6 +101,8 @@ const Languages: React.FC<any> = () => {
             scale: 0.75,
           },
           transition: {
+            repeat: undefined,
+            repeatType: undefined,
             duration: 1,
             ease: "easeInOut",
           },
@@ -121,6 +123,8 @@ const Languages: React.FC<any> = () => {
             y: "10%",
           },
           transition: {
+            repeat: undefined,
+            repeatType: undefined,
             duration: 1,
             ease: "easeInOut",
           },
@@ -143,7 +147,7 @@ const Languages: React.FC<any> = () => {
           },
           transition: {
             repeat: Infinity,
-            repeatType: "mirror",
+            repeatType: "mirror" as "mirror",
             duration: 1,
             ease: "easeInOut",
             delay: 0.55,
@@ -165,6 +169,8 @@ const Languages: React.FC<any> = () => {
             scale: 0.75,
           },
           transition: {
+            repeat: undefined,
+            repeatType: undefined,
             duration: 1,
             ease: "easeInOut",
           },
@@ -185,6 +191,8 @@ const Languages: React.FC<any> = () => {
             y: "10%",
           },
           transition: {
+            repeat: undefined,
+            repeatType: undefined,
             duration: 1,
             ease: "easeInOut",
           },
@@ -207,7 +215,7 @@ const Languages: React.FC<any> = () => {
           },
           transition: {
             repeat: Infinity,
-            repeatType: "mirror",
+            repeatType: "mirror" as "mirror",
             duration: 1,
             ease: "easeInOut",
             delay: 0.15,
@@ -229,6 +237,8 @@ const Languages: React.FC<any> = () => {
             scale: 0.75,
           },
           transition: {
+            repeat: undefined,
+            repeatType: undefined,
             duration: 1,
             ease: "easeInOut",
           },
@@ -249,6 +259,8 @@ const Languages: React.FC<any> = () => {
             y: "50%",
           },
           transition: {
+            repeat: undefined,
+            repeatType: undefined,
             duration: 1,
             ease: "easeInOut",
           },
@@ -293,6 +305,8 @@ const Languages: React.FC<any> = () => {
             scale: 0.75,
           },
           transition: {
+            repeat: undefined,
+            repeatType: undefined,
             duration: 1,
             ease: "easeInOut",
           },
@@ -313,6 +327,8 @@ const Languages: React.FC<any> = () => {
             y: "50%",
           },
           transition: {
+            repeat: undefined,
+            repeatType: undefined,
             duration: 1,
             ease: "easeInOut",
           },
@@ -334,7 +350,7 @@ const Languages: React.FC<any> = () => {
         },
         transition: {
           repeat: Infinity,
-          repeatType: "mirror",
+          repeatType: "mirror" as "mirror",
           duration: 1,
           ease: "easeInOut",
           delay: 0.55,
