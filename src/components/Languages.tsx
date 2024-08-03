@@ -381,9 +381,9 @@ const Languages: React.FC<any> = () => {
               className={` ${
                 cardActive
                   ? !yellowCard
-                    ? "opacity-0 duration-300  transition-opacity ease-in-out "
-                    : "h-[30vmin] w-[40vmin] bg-yellow relative flex justify-center max-w-[600px]  max-h-[400px] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
-                  : "h-[30vmin] w-[40vmin] bg-yellow relative flex justify-center max-w-[600px]  max-h-[400px] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
+                    ? "opacity-0 duration-300 transition-opacity ease-in-out"
+                    : "h-[25vmin] w-[35vmin] bg-yellow relative flex justify-center max-w-[50vw] max-h-[50vh] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
+                  : "h-[25vmin] w-[35vmin] bg-yellow relative flex justify-center max-w-[50vw] max-h-[50vh] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
               }`}
               onClick={() => {
                 setCardActive(!cardActive);
@@ -391,33 +391,72 @@ const Languages: React.FC<any> = () => {
                 setYellowCount((prevCount) => (prevCount + 1) % 3);
               }}
             >
-              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-yellow relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-yellow_text font-azeret text-header_lg font-semibold">
+              <div className="h-[25vmin] w-[35vmin] max-w-[50vw] max-h-[50vh] bg-yellow relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-yellow_text font-azeret text-header_lg font-semibold">
                 <span>Languages</span>
               </div>
-              <div className="h-full w-full max-w-[600px]  max-h-[400px] bg-lightyellow absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
+              <div className="h-full w-full max-w-[50vw] max-h-[50vh] bg-lightyellow absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
               <motion.div
                 initial={{ height: "0vw", width: "0vw" }}
                 animate={
                   yellowCard
                     ? {
-                        height: "50vw",
-                        width: "40vw",
+                        height: "60vw",
+                        width: "55vw",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
                     : { height: "0vw", width: "0vw" }
                 }
                 transition={{ duration: 2.5, ease: "easeInOut" }}
-                className="bg-gray-100  absolute h-[50vw] w-[40vw] -z-30 top-[30%] max-h-[1100px] rounded-2xl "
-              ></motion.div>
+                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[110vh] max-w-[1100px] rounded-2xl "
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex justify-end pt-[5%] pr-[5%] ">
+                  <img
+                    className="h-[4vmin] w-[4vmin] cursor-pointer hover:scale-110 ease-in-out duration-200"
+                    src="/x.svg"
+                    onClick={() => {
+                      setCardActive(!cardActive);
+                      setYellowCard(!yellowCard);
+                      setYellowCount((prevCount) => (prevCount + 1) % 3);
+                    }}
+                  />
+                </div>
+
+                <motion.div
+                  animate={
+                    yellowCard
+                      ? {
+                          opacity: 1,
+                        }
+                      : { opacity: 0 }
+                  }
+                  transition={
+                    yellowCard
+                      ? { delay: 2, duration: 1.5, ease: "easeIn" }
+                      : { duration: 1, ease: "easeIn" }
+                  }
+                  className="w-full h-full flex flex-col items-center justify-center"
+                >
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Python
+                  </p>
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Java
+                  </p>
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Golang
+                  </p>
+                </motion.div>
+              </motion.div>
               <motion.div
                 initial={{ height: "0vw", width: "0vw" }}
                 animate={
                   yellowCard
                     ? {
-                        height: "50vw",
-                        width: "40vw",
+                        height: "60vw",
+                        width: "55vw",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
@@ -425,7 +464,7 @@ const Languages: React.FC<any> = () => {
                 }
                 transition={{ duration: 2.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300  absolute h-[50vw] w-[40vw] -z-40  max-h-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[110vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
@@ -440,53 +479,90 @@ const Languages: React.FC<any> = () => {
               className={` ${
                 cardActive
                   ? !greenCard
-                    ? "opacity-0 duration-300  transition-opacity ease-in-out"
-                    : "h-[30vmin] w-[40vmin] bg-green relative flex justify-center max-w-[600px]  max-h-[400px] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
-                  : "h-[30vmin] w-[40vmin] bg-green relative flex justify-center max-w-[600px]  max-h-[400px] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
+                    ? "opacity-0 duration-300 transition-opacity ease-in-out"
+                    : "h-[25vmin] w-[35vmin] bg-green relative flex justify-center max-w-[50vw] max-h-[50vh] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
+                  : "h-[25vmin] w-[35vmin] bg-green relative flex justify-center max-w-[50vw] max-h-[50vh] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
               }`}
               onClick={() => {
                 setCardActive(!cardActive);
                 setGreenCard(!greenCard);
-
                 setGreenCount((prevCount) => (prevCount + 1) % 3);
-                console.log(greenCount);
               }}
             >
-              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-green relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-green_text font-azeret text-header_lg font-semibold">
+              <div className="h-[25vmin] w-[35vmin] max-w-[50vw] max-h-[50vh] bg-green relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-green_text font-azeret text-header_lg font-semibold">
                 <span>Front-End</span>
               </div>
-              <div className="h-full w-full max-w-[600px]  max-h-[400px] bg-lightgreen absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
+              <div className="h-full w-full max-w-[50vw] max-h-[50vh] bg-lightgreen absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
               <motion.div
                 initial={{ height: "0vw", width: "0vw" }}
                 animate={
                   greenCard
                     ? {
-                        height: "40vw",
-                        width: "35vw",
+                        height: "60vw",
+                        width: "55vw",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
                     : { height: "0vw", width: "0vw" }
                 }
-                transition={{ duration: 2.5, ease: "easeInOut" }}
-                className="bg-gray-100  absolute h-[45vw] w-[35vw] -z-30 top-[30%] max-h-[1100px] rounded-2xl overflow-x-hidden"
-              ></motion.div>
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[110vh] max-w-[1100px] rounded-2xl "
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex justify-end pt-[5%] pr-[5%] ">
+                  <img
+                    className="h-[4vmin] w-[4vmin] cursor-pointer hover:scale-110 ease-in-out duration-200"
+                    src="/x.svg"
+                    onClick={() => {
+                      setCardActive(!cardActive);
+                      setGreenCard(!greenCard);
+                      setGreenCount((prevCount) => (prevCount + 1) % 3);
+                    }}
+                  />
+                </div>
+
+                <motion.div
+                  animate={
+                    greenCard
+                      ? {
+                          opacity: 1,
+                        }
+                      : { opacity: 0 }
+                  }
+                  transition={
+                    greenCard
+                      ? { delay: 2, duration: 1.5, ease: "easeIn" }
+                      : { duration: 1, ease: "easeIn" }
+                  }
+                  className="w-full h-full flex flex-col items-center justify-center"
+                >
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Python
+                  </p>
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Java
+                  </p>
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Golang
+                  </p>
+                </motion.div>
+              </motion.div>
               <motion.div
                 initial={{ height: "0vw", width: "0vw" }}
                 animate={
                   greenCard
                     ? {
-                        height: "40vw",
-                        width: "35vw",
+                        height: "60vw",
+                        width: "55vw",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
                     : { height: "0vw", width: "0vw" }
                 }
-                transition={{ duration: 2.5, ease: "easeInOut" }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300  absolute h-[45vw] w-[35vw] -z-40  max-h-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[110vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
@@ -503,53 +579,90 @@ const Languages: React.FC<any> = () => {
               className={` ${
                 cardActive
                   ? !redCard
-                    ? "opacity-0 duration-300  transition-opacity ease-in-out"
-                    : "h-[30vmin] w-[40vmin] bg-red relative flex justify-center max-w-[600px]  max-h-[400px] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
-                  : "h-[30vmin] w-[40vmin] bg-red relative flex justify-center max-w-[600px]  max-h-[400px] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
+                    ? "opacity-0 duration-300 transition-opacity ease-in-out"
+                    : "h-[25vmin] w-[35vmin] bg-red relative flex justify-center max-w-[50vw] max-h-[50vh] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
+                  : "h-[25vmin] w-[35vmin] bg-red relative flex justify-center max-w-[50vw] max-h-[50vh] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
               }`}
               onClick={() => {
                 setCardActive(!cardActive);
                 setRedCard(!redCard);
-
                 setRedCount((prevCount) => (prevCount + 1) % 3);
-                console.log(redCount);
               }}
             >
-              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-red relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-red_text font-azeret text-header_lg font-semibold">
+              <div className="h-[25vmin] w-[35vmin] max-w-[50vw] max-h-[50vh] bg-red relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-red_text font-azeret text-header_lg font-semibold">
                 <span>Dev-Ops</span>
               </div>
-              <div className="h-full w-full max-w-[600px]  max-h-[400px] bg-lightred absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
+              <div className="h-full w-full max-w-[50vw] max-h-[50vh] bg-lightred absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
               <motion.div
                 initial={{ height: "0vw", width: "0vw" }}
                 animate={
                   redCard
                     ? {
-                        height: "40vw",
-                        width: "35vw",
+                        height: "60vw",
+                        width: "55vw",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
                     : { height: "0vw", width: "0vw" }
                 }
-                transition={{ duration: 2.5, ease: "easeInOut" }}
-                className="bg-gray-100  absolute h-[50vw] w-[40vw] -z-30 top-[30%] max-h-[1100px] rounded-2xl"
-              ></motion.div>
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[110vh] max-w-[1100px] rounded-2xl "
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex justify-end pt-[5%] pr-[5%] ">
+                  <img
+                    className="h-[4vmin] w-[4vmin] cursor-pointer hover:scale-110 ease-in-out duration-200"
+                    src="/x.svg"
+                    onClick={() => {
+                      setCardActive(!cardActive);
+                      setRedCard(!redCard);
+                      setRedCount((prevCount) => (prevCount + 1) % 3);
+                    }}
+                  />
+                </div>
+
+                <motion.div
+                  animate={
+                    redCard
+                      ? {
+                          opacity: 1,
+                        }
+                      : { opacity: 0 }
+                  }
+                  transition={
+                    redCard
+                      ? { delay: 2, duration: 1.5, ease: "easeIn" }
+                      : { duration: 1, ease: "easeIn" }
+                  }
+                  className="w-full h-full flex flex-col items-center justify-center"
+                >
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Python
+                  </p>
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Java
+                  </p>
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Golang
+                  </p>
+                </motion.div>
+              </motion.div>
               <motion.div
                 initial={{ height: "0vw", width: "0vw" }}
                 animate={
                   redCard
                     ? {
-                        height: "40vw",
-                        width: "35vw",
+                        height: "60vw",
+                        width: "55vw",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
                     : { height: "0vw", width: "0vw" }
                 }
-                transition={{ duration: 2.5, ease: "easeInOut" }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300  absolute h-[50vw] w-[40vw] -z-40  max-h-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[110vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
@@ -564,53 +677,90 @@ const Languages: React.FC<any> = () => {
               className={` ${
                 cardActive
                   ? !blueCard
-                    ? "opacity-0 duration-300  transition-opacity ease-in-out"
-                    : "h-[30vmin] w-[40vmin] bg-blue relative flex justify-center max-w-[600px]  max-h-[400px] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
-                  : "h-[30vmin] w-[40vmin] bg-blue relative flex justify-center max-w-[600px]  max-h-[400px] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
+                    ? "opacity-0 duration-300 transition-opacity ease-in-out"
+                    : "h-[25vmin] w-[35vmin] bg-blue relative flex justify-center max-w-[50vw] max-h-[50vh] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
+                  : "h-[25vmin] w-[35vmin] bg-blue relative flex justify-center max-w-[50vw] max-h-[50vh] rounded-2xl opacity-100 duration-300 transition-opacity ease-in-out z-50 delay-[1500ms] min-w-[125px] min-h-[85px]"
               }`}
               onClick={() => {
                 setCardActive(!cardActive);
                 setBlueCard(!blueCard);
-
                 setBlueCount((prevCount) => (prevCount + 1) % 3);
-                console.log(blueCount);
               }}
             >
-              <div className="h-[30vmin] w-[40vmin] max-w-[600px]  max-h-[400px] bg-blue relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-blue_text font-azeret text-header_lg font-semibold">
+              <div className="h-[25vmin] w-[35vmin] max-w-[50vw] max-h-[50vh] bg-blue relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-blue_text font-azeret text-header_lg font-semibold">
                 <span>About Me</span>
               </div>
-              <div className="h-full w-full max-w-[600px]  max-h-[400px] bg-lightblue absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
+              <div className="h-full w-full max-w-[50vw] max-h-[50vh] bg-lightblue absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
               <motion.div
                 initial={{ height: "0vw", width: "0vw" }}
                 animate={
                   blueCard
                     ? {
-                        height: "40vw",
-                        width: "35vw",
+                        height: "60vw",
+                        width: "55vw",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
                     : { height: "0vw", width: "0vw" }
                 }
-                transition={{ duration: 2.5, ease: "easeInOut" }}
-                className="bg-gray-100  absolute h-[50vw] w-[40vw] -z-30 top-[30%] max-h-[1100px] rounded-2xl"
-              ></motion.div>
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[110vh] max-w-[1100px] rounded-2xl "
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex justify-end pt-[5%] pr-[5%] ">
+                  <img
+                    className="h-[4vmin] w-[4vmin] cursor-pointer hover:scale-110 ease-in-out duration-200"
+                    src="/x.svg"
+                    onClick={() => {
+                      setCardActive(!cardActive);
+                      setBlueCard(!blueCard);
+                      setBlueCount((prevCount) => (prevCount + 1) % 3);
+                    }}
+                  />
+                </div>
+
+                <motion.div
+                  animate={
+                    blueCard
+                      ? {
+                          opacity: 1,
+                        }
+                      : { opacity: 0 }
+                  }
+                  transition={
+                    blueCard
+                      ? { delay: 2, duration: 1.5, ease: "easeIn" }
+                      : { duration: 1, ease: "easeIn" }
+                  }
+                  className="w-full h-full flex flex-col items-center justify-center"
+                >
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Python
+                  </p>
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Java
+                  </p>
+                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                    Golang
+                  </p>
+                </motion.div>
+              </motion.div>
               <motion.div
                 initial={{ height: "0vw", width: "0vw" }}
                 animate={
                   blueCard
                     ? {
-                        height: "40vw",
-                        width: "35vw",
+                        height: "60vw",
+                        width: "55vw",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
                     : { height: "0vw", width: "0vw" }
                 }
-                transition={{ duration: 2.5, ease: "easeInOut" }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300  absolute h-[50vw] w-[40vw] -z-40  max-h-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[110vh]  max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
