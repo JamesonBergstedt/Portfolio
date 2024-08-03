@@ -20,6 +20,8 @@ const Languages: React.FC<any> = () => {
   const [greenKey, setGreenKey] = useState(200);
   const [yellowKey, setYellowKey] = useState(100);
 
+  const [cardView, setCardView] = useState("");
+
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
@@ -412,7 +414,19 @@ const Languages: React.FC<any> = () => {
                 className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="flex justify-end pt-[5%] pr-[5%] ">
+                <div className="flex justify-between pt-[5%] px-[5%] ">
+                  <div>
+                    {cardView != "" && (
+                      <img
+                        className="h-[4vmin] w-[4vmin] cursor-pointer hover:scale-110 ease-in-out duration-200"
+                        src="/arrow-left.svg"
+                        onClick={() => {
+                          setCardView("");
+                        }}
+                      />
+                    )}
+                  </div>
+
                   <img
                     className="h-[4vmin] w-[4vmin] cursor-pointer hover:scale-110 ease-in-out duration-200"
                     src="/x.svg"
@@ -424,31 +438,64 @@ const Languages: React.FC<any> = () => {
                   />
                 </div>
 
-                <motion.div
-                  animate={
-                    yellowCard
-                      ? {
-                          opacity: 1,
-                        }
-                      : { opacity: 0 }
-                  }
-                  transition={
-                    yellowCard
-                      ? { delay: 2, duration: 1.5, ease: "easeIn" }
-                      : { duration: 1, ease: "easeIn" }
-                  }
-                  className="w-full h-full flex flex-col items-center justify-center"
-                >
-                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
-                    Python
-                  </p>
-                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
-                    Java
-                  </p>
-                  <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
-                    Golang
-                  </p>
-                </motion.div>
+                {cardView == "" && (
+                  <motion.div
+                    animate={
+                      yellowCard
+                        ? {
+                            opacity: 1,
+                          }
+                        : { opacity: 0 }
+                    }
+                    transition={
+                      yellowCard
+                        ? { delay: 2, duration: 1.5, ease: "easeIn" }
+                        : { duration: 1, ease: "easeIn" }
+                    }
+                    className="w-full h-full flex flex-col items-center justify-center"
+                  >
+                    <p
+                      className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer"
+                      onClick={() => setCardView("python")}
+                    >
+                      Python
+                    </p>
+                    <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                      Java
+                    </p>
+                    <p className="text-header_lg font-azeret my-[5%] hover:bg-lightyellow hover:text-yellow_text hover:font-medium px-[5%] rounded-2xl cursor-pointer">
+                      Golang
+                    </p>
+                  </motion.div>
+                )}
+
+                {cardView == "python" && (
+                  <motion.div
+                    animate={
+                      yellowCard
+                        ? {
+                            opacity: 1,
+                          }
+                        : { opacity: 0 }
+                    }
+                    transition={
+                      yellowCard
+                        ? { delay: 2, duration: 1.5, ease: "easeIn" }
+                        : { duration: 1, ease: "easeIn" }
+                    }
+                    className="w-full h-full flex flex-col items-center justify-center"
+                  >
+                    <p className="text-header_sm font-azeret    p-[15%] rounded-2xl text-center">
+                      I have over 8 years of experience working with Python. The
+                      backend for my personal project, Simple Scratch is built
+                      using Python. Additionally, I have expereince with
+                      webscraping (beautifulsoup), data analysis (numpy,
+                      pandas), web services (flask), NLP (nltk), and much more.
+                      Python is my preferred language. I enjoy the simplicity of
+                      it as well as its flexability.
+                    </p>
+                  </motion.div>
+                )}
               </motion.div>
               <motion.div
                 initial={{ height: "0vw", width: "0vw" }}
