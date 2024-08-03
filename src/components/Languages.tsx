@@ -370,7 +370,7 @@ const Languages: React.FC<any> = () => {
         className=" flex justify-center items-center min-h-[110vh] pb-[10%]"
       >
         <div className="flex  flex-wrap justify-center items-center w-full ">
-          <div className="flex justify-center items-center w-[75vw] ">
+          <div className="flex justify-center items-center w-[75vw] max-h-[1200px]">
             <motion.div
               key={yellowKey}
               id="yellow"
@@ -409,7 +409,7 @@ const Languages: React.FC<any> = () => {
                     : { height: "0vw", width: "0vw" }
                 }
                 transition={{ duration: 2.5, ease: "easeInOut" }}
-                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[110vh] max-w-[1100px] rounded-2xl "
+                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex justify-end pt-[5%] pr-[5%] ">
@@ -464,7 +464,7 @@ const Languages: React.FC<any> = () => {
                 }
                 transition={{ duration: 2.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[110vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[100vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
@@ -507,7 +507,7 @@ const Languages: React.FC<any> = () => {
                     : { height: "0vw", width: "0vw" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[110vh] max-w-[1100px] rounded-2xl "
+                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex justify-end pt-[5%] pr-[5%] ">
@@ -562,13 +562,13 @@ const Languages: React.FC<any> = () => {
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[110vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[100vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
           </div>
 
-          <div className="flex justify-center items-center w-[75vw] ">
+          <div className="flex justify-center items-center w-[75vw] max-h-[1200px] ">
             <motion.div
               key={redKey}
               id="red"
@@ -607,7 +607,7 @@ const Languages: React.FC<any> = () => {
                     : { height: "0vw", width: "0vw" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[110vh] max-w-[1100px] rounded-2xl "
+                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex justify-end pt-[5%] pr-[5%] ">
@@ -662,7 +662,7 @@ const Languages: React.FC<any> = () => {
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[110vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[100vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
@@ -705,7 +705,7 @@ const Languages: React.FC<any> = () => {
                     : { height: "0vw", width: "0vw" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[110vh] max-w-[1100px] rounded-2xl "
+                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex justify-end pt-[5%] pr-[5%] ">
@@ -760,7 +760,7 @@ const Languages: React.FC<any> = () => {
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
-                  "bg-gray-300 absolute h-[50vmax] w-[40vmax] -z-40 max-h-[110vh]  max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-gray-300 absolute h-[50vmax] w-[35vmax] -z-40 max-h-[100vh]  max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
                 }
               ></motion.div>
             </motion.div>
