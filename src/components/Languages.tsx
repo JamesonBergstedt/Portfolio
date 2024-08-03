@@ -1,6 +1,7 @@
 // import Spinner from "./Spinner";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+
 // import Card from "./Card";
 
 const Languages: React.FC<any> = () => {
@@ -785,20 +786,34 @@ const Languages: React.FC<any> = () => {
                   className="w-full h-full flex flex-col items-center justify-center"
                 >
                   {blueCard && (
-                    <p className="text-header_sm font-azeret    pt-[5%] p-[15%] rounded-2xl text-center">
-                      Hello! Welcome to my website. As you have probably seen,
-                      my name is Jameson Bergstedt. I am currently employed at
-                      Cisco as a software engineer. There, I work primarily with
-                      technologies such as golang, python, docker, kubernetes,
-                      and jenkins.I am married to my beautiful wife, Kayla, and
-                      we are expecting our first child in October, 2024! We love
-                      the outdoors (especially the mountains) and I am a BIG
-                      motorcycle enthusiast.When I am not hanging out with my
-                      wife, I spend most of my free time playing competitive
-                      video games, pool, and poker...and of course, working on
-                      personal projects. If you’d like to chat, send me an
-                      invitation on linkedIn!
-                    </p>
+                    <div className="flex flex-col items-center justify-center">
+                      <p className="text-header_sm font-azeret    pt-[5%] p-[15%] rounded-2xl text-center">
+                        Hello! Welcome to my website. As you have probably seen,
+                        my name is Jameson Bergstedt. I am currently employed at
+                        Cisco as a software engineer. There, I work primarily
+                        with technologies such as golang, python, docker,
+                        kubernetes, and jenkins.I am married to my beautiful
+                        wife, Kayla, and we are expecting our first child in
+                        October, 2024! We love the outdoors (especially the
+                        mountains) and I am a BIG motorcycle enthusiast.When I
+                        am not hanging out with my wife, I spend most of my free
+                        time playing competitive video games, pool, and
+                        poker...and of course, working on personal projects. If
+                        you’d like to chat, send me an invitation on linkedIn!
+                      </p>
+                      <div className="flex justify-center mb-[5%]">
+                        <a
+                          href="https://www.linkedin.com/in/jameson-bergstedt-88804b181/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            className="h-[8vw] w-[8vw] "
+                            src="./linkedin-icon.svg"
+                          />
+                        </a>
+                      </div>
+                    </div>
                   )}
                 </motion.div>
               </motion.div>
