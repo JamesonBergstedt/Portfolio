@@ -404,15 +404,15 @@ const Languages: React.FC<any> = () => {
                 animate={
                   yellowCard
                     ? {
-                        height: "60vw",
-                        width: "55vw",
+                        height: "50vmax",
+                        width: "40vmax",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
-                    : { height: "0vw", width: "0vw" }
+                    : { height: "0vmax", width: "0vmax" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
+                className="bg-gray-100 absolute -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex justify-between pt-[5%] px-[5%] ">
@@ -505,16 +505,16 @@ const Languages: React.FC<any> = () => {
                 animate={
                   yellowCard
                     ? {
-                        height: "60vw",
-                        width: "55vw",
+                      height: "50vmax",
+                      width: "40vmax",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
-                    : { height: "0vw", width: "0vw" }
+                    : { height: "0vmax", width: "0vmax", }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
-                  "bg-lightyellow absolute h-[50vmax] w-[40vmax] -z-40 max-h-[100vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%] "
+                  "bg-lightyellow absolute -z-40 max-h-[100vh] max-w-[1100px] rounded-2xl top-[35%] ml-[10%]"
                 }
               ></motion.div>
             </motion.div>
