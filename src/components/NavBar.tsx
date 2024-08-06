@@ -64,9 +64,9 @@ const NavBar: React.FC<any> = () => {
           </li>
           <li className="hover:text-red cursor-pointer">
             <a
-              href={"/Jameson_Bergstedt_Resume.pdf"}
-              download="Jameson Bergstedt Resume"
-              target="_blank"
+            // href={"/Jameson_Bergstedt_Resume.pdf"}
+            // download="Jameson Bergstedt Resume"
+            // target="_blank"
             >
               <button>Resume</button>
             </a>

@@ -787,28 +787,45 @@ const Languages: React.FC<any> = () => {
                 >
                   {blueCard && (
                     <div className="flex flex-col items-center justify-center">
-                      <p className="text-header_sm font-azeret    pt-[5%] p-[15%] rounded-2xl text-center">
+                      <p className="text-card_sm font-azeret    py-[5%] px-[15%] rounded-2xl text-center">
                         Hello! Welcome to my website. As you have probably seen,
-                        my name is Jameson Bergstedt. I am currently employed at
-                        Cisco as a software engineer. There, I work primarily
-                        with technologies such as golang, python, docker,
-                        kubernetes, and jenkins.I am married to my beautiful
-                        wife, Kayla, and we are expecting our first child in
-                        October, 2024! We love the outdoors (especially the
-                        mountains) and I am a BIG motorcycle enthusiast.When I
-                        am not hanging out with my wife, I spend most of my free
-                        time playing competitive video games, pool, and
-                        poker...and of course, working on personal projects. If
-                        you’d like to chat, send me an invitation on linkedIn!
+                        my name is Jameson. I am currently employed as a
+                        Software Engineer but have additional experience as a QA
+                        Automation Engineer and Tester. Aside from professional
+                        experience, I am a Full-Stack Developer in my free time
+                        as that is where my passion lies. I love learning new
+                        tools and tricks of the trade! I have been programming
+                        for over 10 years, with three of those being
+                        professional. I graduated Magna Cum Laude from East
+                        Carolina University with a Bachelor's Degree in Computer
+                        Science and a Minor in Russian. I started my programming
+                        career at Comcast as a QA Automation Engineer. There, I
+                        created selenium scripts in a BDD framework using
+                        python. I got a great deal of experience with both
+                        automation and testing! After 2 years with Comcast, I
+                        decided to pivot into a more development focused role
+                        which landed me my current job at Cisco. In this role, I
+                        have gained experience working with languages like
+                        Golang, as well as dev ops tools such as Jenkins,
+                        SonarQube, github Actions, and more! I am also
+                        participating in a study group to build my networking
+                        knowledge with the goal of taking the CCNA within the
+                        upcoming months. Outside of work I enjoy playing video
+                        games, riding my motorcycle, participating in my pool
+                        league, and playing poker…and of course, hanging out
+                        with my beautiful wife, Kayla :) If you are interested
+                        in learning more about me or would like to request my
+                        services, please feel free to reach out either via my
+                        website or on linkedin!
                       </p>
-                      <div className="flex justify-center mb-[5%]">
+                      <div className="flex justify-center ">
                         <a
                           href="https://www.linkedin.com/in/jameson-bergstedt-88804b181/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <img
-                            className="h-[8vw] w-[8vw] "
+                            className="h-[3vw] w-[3vw] min-h-[20px] min-w-[20px]"
                             src="./linkedin-icon.svg"
                           />
                         </a>

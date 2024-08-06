@@ -20,6 +20,7 @@ module.exports = {
       fontSize: {
         header_lg: "clamp(0.75rem, 2vw, 4rem)",
         header_sm: "clamp(0.40rem, 1vw, 1.25rem)",
+        card_sm: "clamp(0.30rem, 0.72vw, 1.25rem)",
         nav: "clamp(0.5rem, 0.75vw, 1.25rem)",
         typewriter: "clamp(1rem, 2.5vw, 6rem)",
       },

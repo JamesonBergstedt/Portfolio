@@ -55,7 +55,7 @@ const Header = () => {
     console.log(delay);
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % (sequence.length / 2));
-    }, 7550); // Change this to match the delay in the sequence
+    }, 7600); // Change this to match the delay in the sequence
 
     return () => clearInterval(interval);
   }, [sequence.length, currentIndex]);
