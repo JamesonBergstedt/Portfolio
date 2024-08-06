@@ -505,12 +505,12 @@ const Languages: React.FC<any> = () => {
                 animate={
                   yellowCard
                     ? {
-                      height: "50vmax",
-                      width: "40vmax",
+                        height: "50vmax",
+                        width: "40vmax",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
-                    : { height: "0vmax", width: "0vmax", }
+                    : { height: "0vmax", width: "0vmax" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
@@ -540,7 +540,7 @@ const Languages: React.FC<any> = () => {
               }}
             >
               <div className="h-[25vmin] w-[35vmin] max-w-[50vw] max-h-[50vh] bg-green relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-green_text font-azeret text-header_lg font-semibold">
-                <span>Front-End</span>
+                <span>Skills</span>
               </div>
               <div className="h-full w-full max-w-[50vw] max-h-[50vh] bg-lightgreen absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
@@ -549,12 +549,12 @@ const Languages: React.FC<any> = () => {
                 animate={
                   greenCard
                     ? {
-                        height: "60vw",
-                        width: "55vw",
+                        height: "50vmax",
+                        width: "40vmax",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
-                    : { height: "0vw", width: "0vw" }
+                    : { height: "0vmax", width: "0vmax" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
@@ -603,12 +603,12 @@ const Languages: React.FC<any> = () => {
                 animate={
                   greenCard
                     ? {
-                        height: "60vw",
-                        width: "55vw",
+                        height: "50vmax",
+                        width: "40vmax",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
-                    : { height: "0vw", width: "0vw" }
+                    : { height: "0vmax", width: "0vmax" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
@@ -640,7 +640,7 @@ const Languages: React.FC<any> = () => {
               }}
             >
               <div className="h-[25vmin] w-[35vmin] max-w-[50vw] max-h-[50vh] bg-red relative flex justify-center rounded-2xl min-w-[125px] min-h-[85px] items-center text-red_text font-azeret text-header_lg font-semibold">
-                <span>Dev-Ops</span>
+                <span>Projects</span>
               </div>
               <div className="h-full w-full max-w-[50vw] max-h-[50vh] bg-lightred absolute flex justify-center -z-20 right-[-5%] bottom-[-5%] rounded-2xl min-w-[125px] min-h-[85px]"></div>
 
@@ -649,12 +649,12 @@ const Languages: React.FC<any> = () => {
                 animate={
                   redCard
                     ? {
-                        height: "60vw",
-                        width: "55vw",
+                        height: "50vmax",
+                        width: "40vmax",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
-                    : { height: "0vw", width: "0vw" }
+                    : { height: "0vmax", width: "0vmax" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
@@ -703,12 +703,12 @@ const Languages: React.FC<any> = () => {
                 animate={
                   redCard
                     ? {
-                        height: "60vw",
-                        width: "55vw",
+                        height: "50vmax",
+                        width: "40vmax",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
-                    : { height: "0vw", width: "0vw" }
+                    : { height: "0vmax", width: "0vmax" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
@@ -747,12 +747,12 @@ const Languages: React.FC<any> = () => {
                 animate={
                   blueCard
                     ? {
-                        height: "60vw",
-                        width: "55vw",
+                        height: "50vmax",
+                        width: "40vmax",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
-                    : { height: "0vw", width: "0vw" }
+                    : { height: "0vmax", width: "0vmax" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className="bg-gray-100 absolute h-[50vmax] w-[40vmax] -z-30 top-[30%] max-h-[100vh] max-w-[1100px] rounded-2xl "
@@ -822,12 +822,12 @@ const Languages: React.FC<any> = () => {
                 animate={
                   blueCard
                     ? {
-                        height: "60vw",
-                        width: "55vw",
+                        height: "50vmax",
+                        width: "40vmax",
                         minHeight: "350px",
                         minWidth: "300px",
                       }
-                    : { height: "0vw", width: "0vw" }
+                    : { height: "0vmax", width: "0vmax" }
                 }
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 className={
